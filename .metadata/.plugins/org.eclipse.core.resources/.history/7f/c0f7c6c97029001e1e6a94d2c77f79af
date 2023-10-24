@@ -1,0 +1,47 @@
+package br.com.visualmix.visualstore.testes;
+
+import org.junit.Assert;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+
+import br.com.visualmix.visualstore.telas.TelaLogin;
+
+@SpringBootTest
+public class TelaLoginTeste {
+
+	@Autowired
+	TelaLogin telaLogin;
+	
+	@AfterEach
+	private void terminarExecucao() {
+		telaLogin.fecharTela();
+	}
+	
+	@Test
+	public void DeveriaAcessarOVisualStore() {
+		telaLogin.
+		acessarTelaLogin()
+		.PreencherCampos("admin", "1")
+		.SubmeterFormulario()
+		.ValidarSeLogouNoVisualStore()
+		.PrintarEvidencia("UsuarioLogado.png");
+		
+		Assert.assertEquals(telaLogin.usuarioLogado, true);
+	}
+	
+	@Test
+	public void NaoDeveriaAcessarOVisualStore() {
+		telaLogin.
+		acessarTelaLogin()
+		.PreencherCampos("admin", "666")
+		.SubmeterFormulario()
+		.ValidarSeLogouNoVisualStore()
+		.PrintarEvidencia("TesteAcessoNegado.png");
+		
+		Assert.assertEquals(telaLogin.usuarioLogado, false);
+	}
+
+}

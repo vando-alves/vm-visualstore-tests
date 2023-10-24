@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "selenium.webdriver.chrome.driver-path",
+  "type": "java.lang.String",
+  "description": "Propriedade que aponta o caminho do webdriver.exe"
+}]}

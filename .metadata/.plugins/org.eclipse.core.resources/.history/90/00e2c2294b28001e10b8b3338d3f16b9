@@ -1,0 +1,37 @@
+package br.com.visualmix.visualstore.config.parameters;
+
+import org.springframework.stereotype.Component;
+
+import br.com.maxicode.util.Funcoes;
+
+@Component
+class ParameterReader {
+	
+	public String readString(Parameter p) {
+		return Funcoes.getParametro(p.getParameter(), p.getDefaultParameter());
+	}
+	
+	public Integer readInteger(Parameter p) {
+		return Integer.parseInt(readString(p));
+	}
+
+	
+	public Double readDouble(Parameter p) {
+		return Double.parseDouble(readString(p));
+	}
+
+	
+	public Float readFloat(Parameter p) {
+		return Float.parseFloat(readString(p));
+	}
+
+	
+	public Long readLong(Parameter p) {
+		return Long.parseLong(readString(p));
+	}
+
+	public Short readShort(Parameter p) {
+		return Short.parseShort(readString(p));
+	}
+	
+}

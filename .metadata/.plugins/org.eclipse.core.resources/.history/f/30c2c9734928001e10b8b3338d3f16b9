@@ -1,0 +1,27 @@
+package br.com.visualmix.visualstore.config.parameters;
+
+public enum Parameter {
+	
+	TESTSERVER_IP("TEST.IP", "localhost"),
+	TESTSERVER_PORT("TEST.PORT", "9092"),
+	TESTSERVER_USER("TEST.USER", "admin"),
+	TESTSERVER_PASSWORD("TEST.PASSWORD", "admin");
+	
+	public final String PARAMETER;
+	public final String DEFAULT;
+	
+	Parameter(String pARAMETER, String dEFAULT) {
+		PARAMETER = pARAMETER;
+		DEFAULT = dEFAULT;
+	}
+
+	public String getParameter() {
+		return PARAMETER;
+	}
+
+
+	public String getDefaultParameter() {
+		return DEFAULT;
+	}
+
+}

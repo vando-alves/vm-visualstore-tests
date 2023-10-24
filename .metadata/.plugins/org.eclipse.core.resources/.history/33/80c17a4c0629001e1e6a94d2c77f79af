@@ -1,0 +1,17 @@
+package br.com.visualmix.visualstore.telas;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import br.com.visualmix.visualstore.config.WebDriverConfig;
+
+public abstract  class BaseTela {
+	
+	@Autowired
+	WebDriverConfig webdriver;
+	
+	static final String URL = "http://localhost:8090/vm_visualstore_adm";
+	public boolean usuarioLogado;
+	
+	
+
+}

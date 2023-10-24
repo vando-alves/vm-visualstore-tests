@@ -1,0 +1,46 @@
+package br.com.visualmix.visualstore.telas;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import br.com.visualmix.visualstore.testes.TelaComponenteTeste;
+
+@Component
+public class TelaComponente extends BaseTela  {
+
+	
+	
+	@Override
+	public TelaComponente LogarNoSistema() {
+		super.LogarNoSistema();
+		return this;
+	}
+	
+	public TelaComponente CadastarComponente() {
+		
+		driver.findElement(By.id("e0_5i")).click();
+		driver.findElement(By.id("e0_27i")).click();
+		driver.findElement(By.id("e0_28i")).click();
+		driver.switchTo().frame(0).findElement(By.linkText("Incluir")).click();
+		driver.findElement(By.name("txtLoja")).clear();
+		driver.findElement(By.name("txtLoja")).sendKeys("33");
+		driver.findElement(By.name("txtCodigo")).clear();
+		driver.findElement(By.name("txtCodigo")).sendKeys("20");
+		driver.findElement(By.name("txtLocalizao")).sendKeys("PDV REGRESAO");
+		driver.findElement(By.name("cmbModelo")).click();
+		new Select(driver.findElement(By.name("cmbModelo"))).selectByVisibleText("0-NÃO INFORMADO");
+		driver.findElement(By.name("cbxNFCe")).click();
+		driver.findElement(By.name("cbxParametros")).click();
+		driver.findElement(By.name("cbxProdutos")).click();
+		driver.findElement(By.name("btnSalvar")).click();
+		driver.switchTo().alert().accept();
+		driver.findElement(By.name("cmdOK")).click();
+		
+		return this;
+	}
+}
+
+
+

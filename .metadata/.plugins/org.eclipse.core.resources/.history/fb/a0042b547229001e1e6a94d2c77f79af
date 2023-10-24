@@ -1,0 +1,5 @@
+package br.com.visualmix.visualstore.dao;
+
+public class TestesDAO {
+
+}

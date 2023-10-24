@@ -1,0 +1,7 @@
+package br.com.visualmix.visualstore.config;
+
+
+@Configuration
+public class AppConfig {
+
+}

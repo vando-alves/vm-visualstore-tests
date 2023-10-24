@@ -1,0 +1,22 @@
+package br.com.visualmix.visualstore.telas;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class TelaComponente extends BaseTela  {
+
+	
+	@Override
+	public TelaComponente LogarNoSistema() {
+		super.LogarNoSistema();
+		return this;
+	}
+	
+	public TelaComponente CadastarComponente() {
+		
+		return this;
+	}
+}
+
+
+

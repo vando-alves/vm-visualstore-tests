@@ -1,0 +1,10 @@
+package br.com.visualmix.visualstore.config;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig {
+	
+	public static final String FILE_CONF = "VM_VisualStore_Adm.conf";
+
+}

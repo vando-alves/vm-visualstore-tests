@@ -1,0 +1,62 @@
+package br.com.visualmix.visualstore.testes;
+
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import br.com.visualmix.visualstore.telas.TelaComponente;
+
+@SpringBootTest
+public class TelaComponenteTeste {
+	
+	@Autowired
+	TelaComponente telaComponente;
+	
+	@Test
+	public void ValidarCadastroDeComponentePDV() {
+		telaComponente.
+		LogarNoSistema().
+		CadastarComponentePDV();
+		
+		Assert.assertTrue(true);
+	}
+	
+	@Test
+	public void ValidarCadastroDeComponenteTotem() {
+		telaComponente.
+		LogarNoSistema().
+		CadastarComponenteTotem();
+		
+		Assert.assertTrue(true);
+	}
+	
+	@Test
+	public void ValidarCadastroDeComponenteGateway() {
+		telaComponente.
+		LogarNoSistema().
+		CadastarComponenteGateway();
+		
+		Assert.assertTrue(true);
+	}
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+   public void ValidarDeleteComponente() {
+		
+	}
+   
+   public void ValidarAtualizacaoComponente() {
+		
+	}
+}

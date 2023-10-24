@@ -1,0 +1,28 @@
+package br.com.visualmix.visualstore.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+
+import br.com.maxicode.core.Conexao;
+import br.com.visualmix.generico.conexao.Application;
+
+@Configuration
+public class AppConfig {
+	
+	public static final String FILE_CONF = "VM_VisualStore_Adm.conf";
+	
+	@Bean("application")
+	public Application applicationInitialize() {
+		Application.ArquivoConf = FILE_CONF;
+		Application.initialize();
+		return Application.getInstance();
+	}
+	
+	@Bean("vm-databsp")
+	@Scope("singleton")
+	public Conexao getVmDatabspConnection() {
+		return Application.getInstance().getConexaoPrincipal();
+	}
+
+}

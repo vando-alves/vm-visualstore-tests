@@ -1,0 +1,16 @@
+package br.com.visualmix.visualstore.testes;
+
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class TelaComponenteTeste {
+	
+	public void ValidarCadastroDeComponente() {
+		
+	}
+
+	
+   public void ValidarTestarDeleteComponente() {
+		
+	}
+}

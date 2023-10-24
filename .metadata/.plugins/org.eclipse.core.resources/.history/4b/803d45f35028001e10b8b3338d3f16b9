@@ -1,0 +1,20 @@
+package br.com.visualmix.visualstore.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import br.com.visualmix.generico.conexao.Application;
+
+@Configuration
+public class AppConfig {
+	
+	public static final String FILE_CONF = "VM_VisualStore_Adm.conf";
+	
+	@Bean("application")
+	public Application applicationInitialize() {
+		Application.ArquivoConf = FILE_CONF;
+		Application.initialize();
+		return Application.getInstance();
+	}
+
+}

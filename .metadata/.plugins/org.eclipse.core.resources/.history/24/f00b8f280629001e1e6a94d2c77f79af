@@ -1,0 +1,5 @@
+package br.com.visualmix.visualstore.telas;
+
+public abstract  class BaseTela {
+
+}

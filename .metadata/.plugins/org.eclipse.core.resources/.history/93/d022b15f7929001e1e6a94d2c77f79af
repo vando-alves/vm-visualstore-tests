@@ -1,0 +1,68 @@
+package br.com.visualmix.visualstore.dao;
+
+import org.springframework.stereotype.Component;
+
+import br.com.maxicode.core.Conexao;
+import br.com.maxicode.db.IRecordSet;
+import br.com.visualmix.generico.conexao.Application;
+
+
+@Component
+public class TestesDAO {
+	
+	Conexao conn;
+	
+	
+	public int getUltimoRegistro(String tabela, String ColunaÌdent) {
+		int UltimoId = 0;
+		String strsql = "SELECT MAX("+ColunaÌdent+") as CODIGO from " + tabela;
+		IRecordSet rst = conn.getRecordSet(strsql);
+		if (rst.next())
+			UltimoId = rst.getInt("CODIGO");
+		else 
+			UltimoId = 1;
+		return UltimoId;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	public TestesDAO() {
+
+		try {
+			System.out.println("Carregando Conf");
+			Application.ArquivoConf = "VM_VisualStore_Adm.conf";
+			Application.initialize();
+			conn = Application.getInstance().getConexaoPrincipal();
+		
+			
+		} catch (Exception e) {
+			System.out.println("Erro ao conectar no banco :" + e.getMessage());
+		}
+	}
+
+}

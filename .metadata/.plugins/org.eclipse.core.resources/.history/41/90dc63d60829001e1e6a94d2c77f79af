@@ -1,0 +1,42 @@
+package br.com.visualmix.visualstore.telas;
+
+import org.openqa.selenium.By;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import br.com.visualmix.visualstore.config.WebDriverConfig;
+
+public abstract  class BaseTela {
+	
+	@Autowired
+	WebDriverConfig webdriver;
+	
+	static final String URL = "http://localhost:8090/vm_visualstore_adm";
+	public boolean usuarioLogado;
+	
+	public BaseTela LogarNoSistema() {
+		webdriver.webDriver().findElement(By.id("usuarios")).sendKeys("admin");
+		webdriver.webDriver().findElement(By.id("senha")).clear();
+		webdriver.webDriver().findElement(By.id("senha")).sendKeys("1");
+		webdriver.webDriver().findElement(By.id("btnEnviar")).click();
+		
+		return this;
+	}
+	
+
+	public BaseTela PrintarEvidencia(String NomeImagem) {
+		usuarioLogado =	webdriver.webDriver().getPageSource().contains("Visual Mix Framework");
+		return this;
+	} 
+	
+	
+	public void fecharTela() {
+		webdriver.webDriver().close();
+	}
+	
+	public abstract void aaa() {
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,67 @@
+package br.com.visualmix.visualstore.telas;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class TelaComponente extends BaseTela {
+
+	@Override
+	public TelaComponente LogarNoSistema() {
+		super.LogarNoSistema();
+		return this;
+	}
+
+	public TelaComponente CadastarComponentePDV() {
+
+		webdriver.webDriver().findElement(By.id("e0_5i")).click();
+		webdriver.webDriver().findElement(By.id("e0_28i")).click();
+		webdriver.webDriver().findElement(By.id("e0_29i")).click();
+		webdriver.webDriver().switchTo().frame(0).findElement(By.linkText("Incluir")).click();
+		webdriver.webDriver().findElement(By.name("txtLoja")).clear();
+		webdriver.webDriver().findElement(By.name("txtLoja")).sendKeys("1");
+		webdriver.webDriver().findElement(By.name("txtCodigo")).clear();
+		webdriver.webDriver().findElement(By.name("txtCodigo")).sendKeys("20");
+		webdriver.webDriver().findElement(By.name("txtLocalizao")).sendKeys("PDV REGRESAO");
+		webdriver.webDriver().findElement(By.name("cmbModelo")).click();
+		new Select(webdriver.webDriver().findElement(By.name("cmbModelo"))).selectByVisibleText("0-NÃO INFORMADO");
+		webdriver.webDriver().findElement(By.name("cbxNFCe")).click();
+		webdriver.webDriver().findElement(By.name("cbxParametros")).click();
+		webdriver.webDriver().findElement(By.name("cbxProdutos")).click();
+		super.PrintarEvidencia("ComponentePreenchido.png");
+		webdriver.webDriver().findElement(By.name("btnSalvar")).click();
+		webdriver.webDriver().switchTo().alert().accept();
+		super.PrintarEvidencia("ComponenteSalvo.png");
+		webdriver.webDriver().findElement(By.name("cmdOK")).click();
+
+		return this;
+	}
+
+	public TelaComponente CadastarComponenteTotem() {
+
+		webdriver.webDriver().findElement(By.id("e0_5i")).click();
+		webdriver.webDriver().findElement(By.id("e0_28i")).click();
+		webdriver.webDriver().findElement(By.id("e0_29i")).click();
+		webdriver.webDriver().switchTo().frame(0).findElement(By.linkText("Incluir")).click();
+		webdriver.webDriver().findElement(By.name("txtLoja")).clear();
+		webdriver.webDriver().findElement(By.name("txtLoja")).sendKeys("1");
+		webdriver.webDriver().findElement(By.name("txtCodigo")).clear();
+		webdriver.webDriver().findElement(By.name("txtCodigo")).sendKeys("20");
+		webdriver.webDriver().findElement(By.name("txtLocalizao")).sendKeys("PDV REGRESAO");
+		webdriver.webDriver().findElement(By.name("cmbModelo")).click();
+		new Select(webdriver.webDriver().findElement(By.name("cmbModelo"))).selectByVisibleText("0-NÃO INFORMADO");
+		webdriver.webDriver().findElement(By.name("cbxNFCe")).click();
+		webdriver.webDriver().findElement(By.name("cbxParametros")).click();
+		webdriver.webDriver().findElement(By.name("cbxProdutos")).click();
+		super.PrintarEvidencia("ComponentePreenchido.png");
+		webdriver.webDriver().findElement(By.name("btnSalvar")).click();
+		webdriver.webDriver().switchTo().alert().accept();
+		super.PrintarEvidencia("ComponenteSalvo.png");
+		webdriver.webDriver().findElement(By.name("cmdOK")).click();
+
+		return this;
+	}
+
+}

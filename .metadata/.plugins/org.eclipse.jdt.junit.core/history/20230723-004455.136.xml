@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TelaLoginTeste.NaoDeveriaAcessarOVisualStore" project="vm-visualstore-test" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.visualmix.visualstore.testes.TelaLoginTeste" time="5.124" displayname="TelaLoginTeste" uniqueid="[engine:junit-jupiter]/[class:br.com.visualmix.visualstore.testes.TelaLoginTeste]">
+    <testcase name="NaoDeveriaAcessarOVisualStore" classname="br.com.visualmix.visualstore.testes.TelaLoginTeste" time="5.124" displayname="NaoDeveriaAcessarOVisualStore()" uniqueid="[engine:junit-jupiter]/[class:br.com.visualmix.visualstore.testes.TelaLoginTeste]/[method:NaoDeveriaAcessarOVisualStore()]"/>
+  </testsuite>
+</testrun>

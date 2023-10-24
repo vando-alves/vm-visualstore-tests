@@ -1,0 +1,31 @@
+package br.com.visualmix.visualstore.config.parameters;
+
+public enum Parameters {
+	
+	BROKER_IP("BROKER.IP", "localhost"),
+	BROKER_PORT("BROKER.PORT", "9092"),
+	BROKER_USER("BROKER.USER", "admin"),
+	BROKER_PASSWORD("BROKER.PASSWORD", "admin"),
+	BROKER_SECURITY_PROTOCOL("BROKER.SECURITY.PROTOCOL", "PLAINTEXT"),
+	BROKER_JAAS_FILE("BROKER.JAAS.FILE", "");
+	
+	
+	
+	public final String PARAMETER;
+	public final String DEFAULT;
+	
+	Parameters(String pARAMETER, String dEFAULT) {
+		PARAMETER = pARAMETER;
+		DEFAULT = dEFAULT;
+	}
+
+	public String getParameter() {
+		return PARAMETER;
+	}
+
+
+	public String getDefaultParameter() {
+		return DEFAULT;
+	}
+
+}

@@ -1,0 +1,15 @@
+package br.com.visualmix.visualstore.testes;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class TelaLoginTeste {
+
+	
+	@Test
+	public void DeveriaAcessarOVisualStore() {
+		
+	}
+
+}

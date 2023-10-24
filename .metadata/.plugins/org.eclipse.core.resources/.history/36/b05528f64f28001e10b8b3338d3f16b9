@@ -1,0 +1,31 @@
+package br.com.visualmix.visualstore.telas;
+
+public class TelaLogin {	
+	
+	static final String URL = "http://localhost:8090/vm_visualstore_adm/br/com/visualmix/generico/acesso/jsplogin/Event.jsp";
+	
+	public TelaLogin acessarTelaLogin() {
+		
+		return this;
+	}
+	
+	public TelaLogin PreencherCampos(String usuario, String senha) {
+		
+		return this;
+	}
+
+	
+	public TelaLogin SubmeterFormulario() {
+		
+		return this;
+	}
+    
+	public void fecharTela() {
+		
+		
+	}
+    
+    
+    
+
+}

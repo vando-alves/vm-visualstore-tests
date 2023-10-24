@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="VmVisualstoreTestApplicationTests" project="vm-visualstore-test" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.visualmix.visualstore.VmVisualstoreTestApplicationTests" time="3.936" displayname="VmVisualstoreTestApplicationTests" uniqueid="[engine:junit-jupiter]/[class:br.com.visualmix.visualstore.VmVisualstoreTestApplicationTests]">
+    <testcase name="contextLoads" classname="br.com.visualmix.visualstore.VmVisualstoreTestApplicationTests" time="3.936" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:br.com.visualmix.visualstore.VmVisualstoreTestApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+</testrun>

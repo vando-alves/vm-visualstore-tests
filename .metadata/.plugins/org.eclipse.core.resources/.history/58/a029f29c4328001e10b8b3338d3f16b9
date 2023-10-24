@@ -1,0 +1,25 @@
+package br.com.visualmix.visualstore;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import br.com.visualmix.visualstore.config.WebDriverConfig;
+
+@SpringBootTest
+class VmVisualstoreTestApplicationTests {
+	
+	@Autowired
+	WebDriverConfig webDriver;
+
+	@Test
+	void contextLoads() {
+		
+		try {
+		webDriver.webDriver().navigate().to("https://maven.apache.org/download.cgi");
+		}catch(RuntimeException e) {
+			e.printStackTrace()
+		}
+	}
+
+}

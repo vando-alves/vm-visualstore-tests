@@ -1,0 +1,19 @@
+package br.com.visualmix.visualstore.config;
+
+@Configuration
+public class WebDriverConfig {
+
+	@Value("${selenium.webdriver.chrome.driver-path}")
+	private String chromeDriverPath;
+
+	@Bean
+	public WebDriver webDriver() {
+		System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		WebDriver webdriver = new ChromeDriver(options);
+
+		return webdriver;
+	}
+
+}

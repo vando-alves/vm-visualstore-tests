@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TelaComponenteTeste.ValidarCadastroDeComponente" project="vm-visualstore-test" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.visualmix.visualstore.testes.TelaComponenteTeste" time="4.476" displayname="TelaComponenteTeste" uniqueid="[engine:junit-jupiter]/[class:br.com.visualmix.visualstore.testes.TelaComponenteTeste]">
+    <testcase name="ValidarCadastroDeComponente" classname="br.com.visualmix.visualstore.testes.TelaComponenteTeste" time="4.476" displayname="ValidarCadastroDeComponente()" uniqueid="[engine:junit-jupiter]/[class:br.com.visualmix.visualstore.testes.TelaComponenteTeste]/[method:ValidarCadastroDeComponente()]"/>
+  </testsuite>
+</testrun>

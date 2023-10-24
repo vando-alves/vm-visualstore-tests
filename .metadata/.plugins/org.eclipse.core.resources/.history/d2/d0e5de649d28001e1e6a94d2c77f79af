@@ -1,0 +1,46 @@
+package br.com.visualmix.visualstore.telas;
+
+import org.openqa.selenium.By;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import br.com.visualmix.visualstore.config.WebDriverConfig;
+
+@Component
+public class TelaLogin {	
+	
+	@Autowired
+	WebDriverConfig webdriver;
+	
+	static final String URL = "http://localhost:8090/vm_visualstore_adm/br/com/visualmix/generico/acesso/jsplogin/Event.jsp";
+	
+	public TelaLogin acessarTelaLogin() {
+		webdriver.webDriver().get(URL);	
+		return this;
+	}
+	
+	public TelaLogin PreencherCampos(String usuario, String senha) {
+		webdriver.webDriver().findElement(By.id("usuarios")).sendKeys(usuario);
+		webdriver.webDriver().findElement(By.id("senha")).clear();
+		webdriver.webDriver().findElement(By.id("senha")).sendKeys(senha);
+		return this;
+	}
+
+	
+	public TelaLogin SubmeterFormulario() {
+		webdriver.webDriver().findElement(By.id("btnEnviar")).click();
+		return this;
+	}
+    
+	public void fecharTela() {
+		
+		
+		webdriver.webDriver().wait(67L);
+		webdriver.webDriver().close();
+		
+	}
+    
+    
+    
+
+}
